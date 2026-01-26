@@ -35,18 +35,18 @@ const photos = [
 // --- DATA ANGGOTA (Para Pejuang) ---
 // Ganti URL foto di properti 'photo' untuk mengganti foto avatar.
 const kknMembers = [
-    { name: "Safira Nur Amaliyah", role: "Kordes", photo: "#" },
-    { name: "Nur Mustafida", role: "Sekretaris", photo: "#" },
-    { name: "Dea Novela Ramadani", role: "Bendahara", photo: "#" },
-    { name: "Dini Amalia Irvanti", role: "Acara", photo: "#" },
-    { name: "Chika Dyah Fishanta", role: "Acara", photo: "#" },
-    { name: "Melin Silvika Nur'aini", role: "Acara", photo: "#" },
-    { name: "Shinta Nuriyah Maulidi", role: "Humas", photo: "#" },
-    { name: "Amanda Putri A.", role: "Humas", photo: "#" },
-    { name: "Mohammad Faqih", role: "Perlengkapan", photo: "#" },
-    { name: "Muhammad Rico Prasetya", role: "Perlengkapan", photo: "#" },
-    { name: "Rifqi Ardiyansyah", role: "Pubdekdok", photo: "#" },
-    { name: "Nugroho Tri Purnomo", role: "Pubdekdok", photo: "#" }
+    { name: "Safira Nur Amaliyah", role: "Kordes", photo: "/image/1.jpg" },
+    { name: "Nur Mustafida", role: "Sekretaris", photo: "/image/2.png" },
+    { name: "Dea Novela Ramadani", role: "Bendahara", photo: "/image/3.png" },
+    { name: "Dini Amalia Irvanti", role: "Acara", photo: "/image/4.png" },
+    { name: "Chika Dyah Fishanta", role: "Acara", photo: "/image/5.png" },
+    { name: "Melin Silvika Nur'aini", role: "Acara", photo: "/image/6.png" },
+    { name: "Shinta Nuriyah Maulidi", role: "Humas", photo: "/image/7.png" },
+    { name: "Amanda Putri Agung Pratama", role: "Humas", photo: "/image/8.png" },
+    { name: "Mohammad Faqih", role: "Perlengkapan", photo: "/image/9.png" },
+    { name: "Muhammad Rico Prasetya", role: "Perlengkapan", photo: "/image/10.png" },
+    { name: "Rifqi Ardiyansyah", role: "Pubdekdok", photo: "/image/11.png" },
+    { name: "Nugroho Tri Purnomo", role: "Pubdekdok", photo: "/image/12.png" }
 ];
 
 const galleryWrapper = document.getElementById('gallery-container');
