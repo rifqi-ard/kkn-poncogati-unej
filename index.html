@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Kenangan KKN - Memori Tak Terlupakan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'kkn-primary': '#5d8736',
+                        'kkn-secondary': '#7f9d3c',
+                        'kkn-accent': '#a8c172',
+                        'kkn-soft': '#c3d2ab',
+                        'kkn-white': '#ffffff',
+                        'kkn-dark': '#1a2412',
+                        'kkn-footer-dark': '#0d131f',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-800 dark:bg-kkn-dark dark:text-slate-100">
+
+    <!-- Tombol Ganti Tema -->
+    <button id="theme-toggle" class="fixed bottom-6 right-6 z-[60] bg-kkn-primary text-white p-4 rounded-full shadow-2xl hover:scale-110 transition active:scale-95 focus:outline-none">
+        <i id="theme-icon" class="fas fa-moon text-xl"></i>
+    </button>
+
+    <!-- Header / Navbar -->
+    <nav class="fixed w-full z-50 glass-morphism shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fas fa-camera-retro text-kkn-primary text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-kkn-primary">KKN Desa Poncogati 2025</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="px-3 py-2 text-sm font-medium hover:text-kkn-primary transition dark:text-slate-200">Beranda</a>
+                        <a href="#timeline" class="px-3 py-2 text-sm font-medium hover:text-kkn-primary transition dark:text-slate-200">Timeline</a>
+                        <a href="#gallery" class="px-3 py-2 text-sm font-medium hover:text-kkn-primary transition dark:text-slate-200">Galeri</a>
+                        <a href="#members" class="px-3 py-2 text-sm font-medium hover:text-kkn-primary transition dark:text-slate-200">Anggota</a>
+                        <a href="#messages" class="px-3 py-2 text-sm font-medium hover:text-kkn-primary transition dark:text-slate-200">Pesan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden pt-16">
+        <div class="absolute inset-0 z-0">
+            <img src="\image\Home.jpg" alt="Hero Background" class="w-full h-full object-cover opacity-60 dark:opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-b from-kkn-soft/30 to-white dark:to-kkn-dark"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+                35 Hari Mengabdi, <br><span class="text-kkn-primary underline decoration-kkn-accent">Selamanya Berkesan.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Kumpulan cerita, tawa, dan perjuangan kelompok KKN Desa Poncogati. Karena setiap sudut desa punya cerita sendiri.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://photos.app.goo.gl/VpGodE88ZwebC9pG8" class="bg-kkn-primary text-white px-8 py-3 rounded-full font-semibold shadow-lg shadow-kkn-soft/50 hover:bg-kkn-secondary transition transform hover:-translate-y-1">Lihat Galeri</a>
+                <a href="#timeline" class="bg-white dark:bg-slate-800 border-2 border-kkn-soft dark:border-kkn-primary text-kkn-primary dark:text-kkn-accent px-8 py-3 rounded-full font-semibold hover:border-kkn-primary hover:bg-kkn-white transition">Perjalanan Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="max-w-7xl mx-auto px-4 -mt-10 relative z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl text-center border border-kkn-soft/30 dark:border-kkn-primary/20">
+                <p class="text-3xl font-bold text-kkn-primary dark:text-kkn-accent">35</p>
+                <p class="text-slate-500 dark:text-slate-400 text-sm">Hari</p>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl text-center border border-kkn-soft/30 dark:border-kkn-primary/20">
+                <p class="text-3xl font-bold text-kkn-primary dark:text-kkn-accent">12</p>
+                <p class="text-slate-500 dark:text-slate-400 text-sm">Anggota</p>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl text-center border border-kkn-soft/30 dark:border-kkn-primary/20">
+                <p class="text-3xl font-bold text-kkn-primary dark:text-kkn-accent">4</p>
+                <p class="text-slate-500 dark:text-slate-400 text-sm">Proker Utama</p>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl text-center border border-kkn-soft/30 dark:border-kkn-primary/20">
+                <p class="text-3xl font-bold text-kkn-primary dark:text-kkn-accent">∞</p>
+                <p class="text-slate-500 dark:text-slate-400 text-sm">Kenangan</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-24 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Perjalanan Pengabdian</h2>
+            <div class="h-1.5 w-20 bg-kkn-primary mx-auto rounded-full"></div>
+            <p class="mt-4 text-slate-500 dark:text-slate-400">Tiga fase penting perjalanan kami di Desa Poncogati</p>
+        </div>
+        
+        <div class="relative wrap overflow-hidden p-4 md:p-10 h-full">
+            <div class="absolute border-opacity-20 border-kkn-primary h-full border-2 left-1/2 -translate-x-1/2"></div>
+            
+            <div class="mb-12 flex justify-between items-center w-full right-timeline">
+                <div class="order-1 w-5/12 hidden md:block"></div>
+                <div class="z-20 flex items-center order-1 bg-kkn-primary shadow-xl w-12 h-12 rounded-full border-4 border-white dark:border-kkn-dark">
+                    <i class="fas fa-plane-arrival mx-auto text-white text-sm"></i>
+                </div>
+                <div class="order-1 bg-white dark:bg-slate-800 border border-kkn-soft/50 dark:border-kkn-primary/30 rounded-2xl shadow-md w-10/12 md:w-5/12 px-6 py-6 hover:shadow-lg transition">
+                    <span class="text-xs font-bold text-kkn-primary uppercase tracking-widest">Minggu 1-2</span>
+                    <h3 class="mb-2 font-bold text-slate-900 dark:text-white text-xl">Langkah Awal & Adaptasi</h3>
+                    <p class="text-sm leading-relaxed text-slate-500 dark:text-slate-400">Penerjunan ke lokasi, perkenalan dengan perangkat desa, dan survei lapangan.</p>
+                </div>
+            </div>
+
+            <div class="mb-12 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                <div class="order-1 w-5/12 hidden md:block"></div>
+                <div class="z-20 flex items-center order-1 bg-kkn-secondary shadow-xl w-12 h-12 rounded-full border-4 border-white dark:border-kkn-dark">
+                    <i class="fas fa-hands-helping mx-auto text-white text-sm"></i>
+                </div>
+                <div class="order-1 bg-white dark:bg-slate-800 border border-kkn-soft/50 dark:border-kkn-primary/30 rounded-2xl shadow-md w-10/12 md:w-5/12 px-6 py-6 hover:shadow-lg transition">
+                    <span class="text-xs font-bold text-kkn-secondary uppercase tracking-widest">Minggu 3-4</span>
+                    <h3 class="mb-2 font-bold text-slate-900 dark:text-white text-xl">Realisasi Program Kerja</h3>
+                    <p class="text-sm leading-relaxed text-slate-500 dark:text-slate-400">Eksekusi 4 program kerja utama bersama masyarakat setempat.</p>
+                </div>
+            </div>
+
+            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                <div class="order-1 w-5/12 hidden md:block"></div>
+                <div class="z-20 flex items-center order-1 bg-kkn-accent shadow-xl w-12 h-12 rounded-full border-4 border-white dark:border-kkn-dark">
+                    <i class="fas fa-heart mx-auto text-white text-sm"></i>
+                </div>
+                <div class="order-1 bg-white dark:bg-slate-800 border border-kkn-soft/50 dark:border-kkn-primary/30 rounded-2xl shadow-md w-10/12 md:w-5/12 px-6 py-6 hover:shadow-lg transition">
+                    <span class="text-xs font-bold text-kkn-accent uppercase tracking-widest">Minggu 4-5</span>
+                    <h3 class="mb-2 font-bold text-slate-900 dark:text-white text-xl">Perpisahan & Kenangan</h3>
+                    <p class="text-sm leading-relaxed text-slate-500 dark:text-slate-400">Penutupan KKN dengan malam keakraban dan momen emosional pamitan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-[#fdfdfd] dark:bg-slate-900/40 border-y border-kkn-soft/20 dark:border-kkn-primary/10 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Galeri Momen</h2>
+                    <p class="text-slate-500 dark:text-slate-400">Kumpulan momen berharga selama pengabdian</p>
+                </div>
+                <div class="mt-6 md:mt-0 flex gap-2" id="filter-container">
+                    <button onclick="filterGallery('all')" class="filter-btn px-4 py-2 rounded-lg bg-kkn-primary text-white shadow-md transition-all">Semua</button>
+                    <button onclick="filterGallery('sosial')" class="filter-btn px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-kkn-soft dark:border-kkn-primary text-kkn-primary dark:text-kkn-accent hover:bg-kkn-soft/20 transition shadow-sm">Sosial</button>
+                    <button onclick="filterGallery('random')" class="filter-btn px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-kkn-soft dark:border-kkn-primary text-kkn-primary dark:text-kkn-accent hover:bg-kkn-soft/20 transition shadow-sm">Random</button>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <button onclick="scrollGallery(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 bg-white dark:bg-slate-800 p-3 rounded-full shadow-lg text-kkn-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div id="gallery-container" class="gallery-container py-4">
+                    <!-- Dinamis via JS -->
+                </div>
+                <button onclick="scrollGallery(1)" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 bg-white dark:bg-slate-800 p-3 rounded-full shadow-lg text-kkn-primary opacity-0 group-hover:opacity-100 group-hover:-translate-x-2 transition-all">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section id="members" class="py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Para Pejuang</h2>
+                <p class="text-slate-500 dark:text-slate-400">12 Sosok di balik cerita pengabdian Desa Poncogati</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-12 gap-x-8" id="members-list">
+                <!-- Diisi via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section id="messages" class="py-24 bg-kkn-primary dark:bg-kkn-primary/80">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-2 text-white">Kotak Pesan</h2>
+            <p class="text-kkn-soft mb-8">Punya kesan atau pesan untuk kami? Kirimkan langsung ke email resmi KKN kami</p>
+            
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-2xl text-left relative overflow-hidden">
+                <!-- Success Message Overlay -->
+                <div id="successOverlay" class="absolute inset-0 bg-white/95 dark:bg-slate-800/95 z-30 hidden flex flex-col items-center justify-center p-8 text-center animate-in fade-in duration-300">
+                    <div class="w-20 h-20 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-full flex items-center justify-center mb-4 text-4xl">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Pesan Terkirim!</h3>
+                    <p class="text-slate-500 dark:text-slate-400 mb-6">Terima kasih atas pesannya. Pesan telah dikirim ke email kelompok KKN Poncogati.</p>
+                    <button onclick="resetForm()" class="px-6 py-2 bg-kkn-primary text-white rounded-xl font-semibold">Kirim Pesan Lain</button>
+                </div>
+
+                <form id="messageForm" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold uppercase text-slate-400 ml-1">Nama Kamu</label>
+                            <input type="text" name="from_name" id="from_name" placeholder="Nama Lengkap" 
+                                class="w-full px-4 py-3 rounded-xl bg-kkn-soft/10 dark:bg-slate-700 dark:text-white border-2 border-transparent focus:border-kkn-accent outline-none transition" required>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold uppercase text-slate-400 ml-1">Tujuan</label>
+                            <input type="text" value="kknponcogatiunej2025@gmail.com" readonly 
+                                class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-900 dark:text-slate-400 border-2 border-transparent cursor-not-allowed outline-none transition">
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold uppercase text-slate-400 ml-1">Isi Pesan</label>
+                        <div class="relative">
+                            <textarea name="message" id="message_text" rows="4" placeholder="Tuliskan pesanmu di sini..." 
+                                class="w-full px-4 py-3 rounded-xl bg-kkn-soft/10 dark:bg-slate-700 dark:text-white border-2 border-transparent focus:border-kkn-accent outline-none transition" required></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="w-full bg-kkn-primary hover:bg-kkn-secondary text-white py-4 rounded-xl font-bold shadow-lg shadow-kkn-primary/30 transition-all flex items-center justify-center">
+                        <span id="btnText">Kirim Pesan</span>
+                    </button>
+                    
+                    <p class="text-[10px] text-center text-slate-400 italic mt-2">
+                        *Pesan akan dikirim langsung ke email utama KKN
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-kkn-footer-dark pt-16 pb-12 px-4 text-center">
+        <div class="flex justify-center items-center gap-8 mb-8">
+            <a href="https://www.instagram.com/kknunej_poncogati25?igsh=eTByeWEyOW4xa3k2" class="text-white text-2xl hover:text-kkn-accent transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@kknunej_poncogati25?si=Qno91_-b26wJ3X4A" class="text-white text-2xl hover:text-kkn-accent transition"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@kknunej_poncogati25?_r=1&_t=ZS-93MocaxNxg4" class="text-white text-2xl hover:text-kkn-accent transition"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="space-y-2">
+            <p class="text-slate-400 text-sm md:text-base">
+                Dibuat oleh Kelompok KKN Desa Poncogati
+            </p>
+            <p class="text-slate-500 text-xs md:text-sm tracking-wide uppercase">
+                &copy;2025 - Memori Tanpa Batas.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center p-4" onclick="closeModal()">
+        <span class="absolute top-6 right-6 text-white text-3xl cursor-pointer">&times;</span>
+        <img id="modalImage" src="" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl">
+    </div>
+</body>
+</html>
