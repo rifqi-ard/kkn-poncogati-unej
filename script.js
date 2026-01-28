@@ -35,18 +35,18 @@ const photos = [
 // --- DATA ANGGOTA (Para Pejuang) ---
 // Ganti URL foto di properti 'photo' untuk mengganti foto avatar.
 const kknMembers = [
-    { name: "Safira Nur Amaliyah", role: "Kordes", photo: "/image/1.jpg" },
-    { name: "Nur Mustafida", role: "Sekretaris", photo: "/image/2.png" },
-    { name: "Dea Novela Ramadani", role: "Bendahara", photo: "/image/3.png" },
-    { name: "Dini Amalia Irvanti", role: "Acara", photo: "/image/4.png" },
-    { name: "Chika Dyah Fishanta", role: "Acara", photo: "/image/5.png" },
-    { name: "Melin Silvika Nur'aini", role: "Acara", photo: "/image/6.png" },
-    { name: "Shinta Nuriyah Maulidi", role: "Humas", photo: "/image/7.png" },
-    { name: "Amanda Putri Agung Pratama", role: "Humas", photo: "/image/8.png" },
-    { name: "Mohammad Faqih", role: "Perlengkapan", photo: "/image/9.png" },
-    { name: "Muhammad Rico Prasetya", role: "Perlengkapan", photo: "/image/10.png" },
-    { name: "Rifqi Ardiyansyah", role: "Pubdekdok", photo: "/image/11.png" },
-    { name: "Nugroho Tri Purnomo", role: "Pubdekdok", photo: "/image/12.png" }
+    { name: "Safira Nur Amaliyah", role: "Kordes", photo: "/image/1.webp" },
+    { name: "Nur Mustafida", role: "Sekretaris", photo: "/image/2.webp" },
+    { name: "Dea Novela Ramadani", role: "Bendahara", photo: "/image/3.webp" },
+    { name: "Dini Amalia Irvanti", role: "Acara", photo: "/image/4.webp" },
+    { name: "Chika Dyah Fishanta", role: "Acara", photo: "/image/5.webp" },
+    { name: "Melin Silvika Nur'aini", role: "Acara", photo: "/image/6.webp" },
+    { name: "Shinta Nuriyah Maulidi", role: "Humas", photo: "/image/7.webp" },
+    { name: "Amanda Putri Agung Pratama", role: "Humas", photo: "/image/8.webp" },
+    { name: "Mohammad Faqih", role: "Perlengkapan", photo: "/image/9.webp" },
+    { name: "Muhammad Rico Prasetya", role: "Perlengkapan", photo: "/image/10.webp" },
+    { name: "Rifqi Ardiyansyah", role: "Pubdekdok", photo: "/image/11.webp" },
+    { name: "Nugroho Tri Purnomo", role: "Pubdekdok", photo: "/image/12.webp" }
 ];
 
 const galleryWrapper = document.getElementById('gallery-container');
