@@ -9,18 +9,18 @@ const photos = [
 ];
 
 const kknMembers = [
-    { name: "Safira Nur Amaliyah", role: "Kordes", photo: "https://ui-avatars.com/api/?name=Safira+Nur&background=5d8736&color=fff" },
-    { name: "Nur Mustafida", role: "Sekretaris", photo: "https://ui-avatars.com/api/?name=Nur+Mustafida&background=5d8736&color=fff" },
-    { name: "Dea Novela R", role: "Bendahara", photo: "https://ui-avatars.com/api/?name=Dea+Novela&background=5d8736&color=fff" },
-    { name: "Dini Amalia I", role: "Acara", photo: "https://ui-avatars.com/api/?name=Dini+Amalia&background=5d8736&color=fff" },
-    { name: "Chika Dyah F", role: "Acara", photo: "https://ui-avatars.com/api/?name=Chika+Dyah&background=5d8736&color=fff" },
-    { name: "Melin Silvika", role: "Acara", photo: "https://ui-avatars.com/api/?name=Melin+Silvika&background=5d8736&color=fff" },
-    { name: "Shinta Nuriyah", role: "Humas", photo: "https://ui-avatars.com/api/?name=Shinta+Nuriyah&background=5d8736&color=fff" },
-    { name: "Amanda Putri", role: "Humas", photo: "https://ui-avatars.com/api/?name=Amanda+Putri&background=5d8736&color=fff" },
-    { name: "Mohammad Faqih", role: "Perlengkapan", photo: "https://ui-avatars.com/api/?name=Mohammad+Faqih&background=5d8736&color=fff" },
-    { name: "M. Rico Prasetya", role: "Perlengkapan", photo: "https://ui-avatars.com/api/?name=M+Rico&background=5d8736&color=fff" },
-    { name: "Rifqi Ardiyansyah", role: "Pubdekdok", photo: "https://ui-avatars.com/api/?name=Rifqi+A&background=5d8736&color=fff" },
-    { name: "Nugroho Tri P", role: "Pubdekdok", photo: "https://ui-avatars.com/api/?name=Nugroho+Tri&background=5d8736&color=fff" }
+    { name: "Safira Nur Amaliyah", role: "Kordes", photo: "/image/1.webp" },
+    { name: "Nur Mustafida", role: "Sekretaris", photo: "/image/2.webp" },
+    { name: "Dea Novela R", role: "Bendahara", photo: "/image/3.webp" },
+    { name: "Dini Amalia I", role: "Acara", photo: "/image/4.webp" },
+    { name: "Chika Dyah F", role: "Acara", photo: "/image/5.webp" },
+    { name: "Melin Silvika", role: "Acara", photo: "/image/6.webp" },
+    { name: "Shinta Nuriyah", role: "Humas", photo: "/image/7.webp" },
+    { name: "Amanda Putri", role: "Humas", photo: "/image/8.webp" },
+    { name: "Mohammad Faqih", role: "Perlengkapan", photo: "/image/9.webp" },
+    { name: "M. Rico Prasetya", role: "Perlengkapan", photo: "/image/10.webp" },
+    { name: "Rifqi Ardiyansyah", role: "Pubdekdok", photo: "/image/11.webp" },
+    { name: "Nugroho Tri P", role: "Pubdekdok", photo: "/image/12.webp" }
 ];
 
 // --- CORE LOGIC ---
