@@ -1,188 +1,135 @@
-// --- KONFIGURASI EMAILJS ---
-const PUBLIC_KEY = ""; 
-const SERVICE_ID = ""; 
-const TEMPLATE_ID = ""; 
-
-(function() {
-    if (PUBLIC_KEY) emailjs.init(PUBLIC_KEY);
-})();
-
-// Data Foto Galeri - 10 Sosial + 10 Random
+// --- DATA ---
 const photos = [
-    { url: '#', title: 'Sosialisasi Pendidikan', category: 'sosial' },
-    { url: '#', title: 'Kerja Bakti Desa', category: 'sosial' },
-    { url: '#', title: 'Rapat Koordinasi', category: 'sosial' },
-    { url: '#', title: 'Bakti Sosial', category: 'sosial' },
-    { url: '#', title: 'Penyuluhan Kesehatan', category: 'sosial' },
-    { url: '#', title: 'Belajar Mengajar', category: 'sosial' },
-    { url: '#', title: 'Posyandu Lansia', category: 'sosial' },
-    { url: '#', title: 'Diskusi Karang Taruna', category: 'sosial' },
-    { url: '#', title: 'Workshop UMKM', category: 'sosial' },
-    { url: '#', title: 'Pawai Budaya', category: 'sosial' },
-
-    { url: '#', title: 'Makan Malam Bersama', category: 'random' },
-    { url: '#', title: 'Senja di Balai Desa', category: 'random' },
-    { url: '#', title: 'Keseruan di Posko', category: 'random' },
-    { url: '#', title: 'Malam Akrab', category: 'random' },
-    { url: '#', title: 'Persiapan Masak', category: 'random' },
-    { url: '#', title: 'Selfie Kelompok', category: 'random' },
-    { url: '#', title: 'Pasar Pagi', category: 'random' },
-    { url: '#', title: 'Hiking Pagi', category: 'random' },
-    { url: '#', title: 'Tawa Bersama Warga', category: 'random' },
-    { url: '#', title: 'Momen Farewell', category: 'random' }
+    { url: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600', title: 'Rapat Desa', category: 'sosial' },
+    { url: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=600', title: 'Workshop Warga', category: 'sosial' },
+    { url: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600', title: 'Makan Bersama', category: 'random' },
+    { url: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=600', title: 'Senyum Bocah', category: 'random' },
+    { url: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600', title: 'Bakti Sosial', category: 'sosial' },
+    { url: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=600', title: 'Malam Akrab', category: 'random' },
 ];
 
-// --- DATA ANGGOTA (Para Pejuang) ---
-// Ganti URL foto di properti 'photo' untuk mengganti foto avatar.
 const kknMembers = [
-    { name: "Safira Nur Amaliyah", role: "Kordes", photo: "/image/1.webp" },
-    { name: "Nur Mustafida", role: "Sekretaris", photo: "/image/2.webp" },
-    { name: "Dea Novela Ramadani", role: "Bendahara", photo: "/image/3.webp" },
-    { name: "Dini Amalia Irvanti", role: "Acara", photo: "/image/4.webp" },
-    { name: "Chika Dyah Fishanta", role: "Acara", photo: "/image/5.webp" },
-    { name: "Melin Silvika Nur'aini", role: "Acara", photo: "/image/6.webp" },
-    { name: "Shinta Nuriyah Maulidi", role: "Humas", photo: "/image/7.webp" },
-    { name: "Amanda Putri Agung Pratama", role: "Humas", photo: "/image/8.webp" },
-    { name: "Mohammad Faqih", role: "Perlengkapan", photo: "/image/9.webp" },
-    { name: "Muhammad Rico Prasetya", role: "Perlengkapan", photo: "/image/10.webp" },
-    { name: "Rifqi Ardiyansyah", role: "Pubdekdok", photo: "/image/11.webp" },
-    { name: "Nugroho Tri Purnomo", role: "Pubdekdok", photo: "/image/12.webp" }
+    { name: "Safira Nur Amaliyah", role: "Kordes", photo: "https://ui-avatars.com/api/?name=Safira+Nur&background=5d8736&color=fff" },
+    { name: "Nur Mustafida", role: "Sekretaris", photo: "https://ui-avatars.com/api/?name=Nur+Mustafida&background=5d8736&color=fff" },
+    { name: "Dea Novela R", role: "Bendahara", photo: "https://ui-avatars.com/api/?name=Dea+Novela&background=5d8736&color=fff" },
+    { name: "Dini Amalia I", role: "Acara", photo: "https://ui-avatars.com/api/?name=Dini+Amalia&background=5d8736&color=fff" },
+    { name: "Chika Dyah F", role: "Acara", photo: "https://ui-avatars.com/api/?name=Chika+Dyah&background=5d8736&color=fff" },
+    { name: "Melin Silvika", role: "Acara", photo: "https://ui-avatars.com/api/?name=Melin+Silvika&background=5d8736&color=fff" },
+    { name: "Shinta Nuriyah", role: "Humas", photo: "https://ui-avatars.com/api/?name=Shinta+Nuriyah&background=5d8736&color=fff" },
+    { name: "Amanda Putri", role: "Humas", photo: "https://ui-avatars.com/api/?name=Amanda+Putri&background=5d8736&color=fff" },
+    { name: "Mohammad Faqih", role: "Perlengkapan", photo: "https://ui-avatars.com/api/?name=Mohammad+Faqih&background=5d8736&color=fff" },
+    { name: "M. Rico Prasetya", role: "Perlengkapan", photo: "https://ui-avatars.com/api/?name=M+Rico&background=5d8736&color=fff" },
+    { name: "Rifqi Ardiyansyah", role: "Pubdekdok", photo: "https://ui-avatars.com/api/?name=Rifqi+A&background=5d8736&color=fff" },
+    { name: "Nugroho Tri P", role: "Pubdekdok", photo: "https://ui-avatars.com/api/?name=Nugroho+Tri&background=5d8736&color=fff" }
 ];
 
+// --- CORE LOGIC ---
 const galleryWrapper = document.getElementById('gallery-container');
+const membersList = document.getElementById('members-list');
+const html = document.documentElement;
 
-// Render Galeri
+// Render Gallery
 function renderGallery(filter = 'all') {
     galleryWrapper.innerHTML = '';
-    const filteredPhotos = filter === 'all' ? photos : photos.filter(p => p.category === filter);
-    filteredPhotos.forEach(photo => {
+    const filtered = filter === 'all' ? photos : photos.filter(p => p.category === filter);
+    filtered.forEach(photo => {
         const item = document.createElement('div');
         item.className = 'gallery-item';
         item.innerHTML = `
-            <div class="photo-card aspect-[4/3]" onclick="openModal('${photo.url}')">
+            <div class="photo-card aspect-video" onclick="openModal('${photo.url}')">
                 <img src="${photo.url}" class="w-full h-full object-cover" loading="lazy">
                 <div class="overlay">
                     <div class="text-white">
-                        <h4 class="font-bold text-lg leading-tight mb-1">${photo.title}</h4>
-                        <span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md rounded text-[10px] uppercase tracking-widest font-semibold">${photo.category}</span>
+                        <h4 class="font-bold text-lg">${photo.title}</h4>
+                        <span class="text-[10px] uppercase font-bold px-2 py-1 bg-white/20 rounded">${photo.category}</span>
                     </div>
                 </div>
             </div>
         `;
         galleryWrapper.appendChild(item);
     });
-    galleryWrapper.scrollLeft = 0;
 }
 
-// Filter Galeri
 function filterGallery(category) {
-    const buttons = document.querySelectorAll('.filter-btn');
-    buttons.forEach(btn => {
-        const btnText = btn.innerText.toLowerCase();
-        if(btnText === category || (category === 'all' && btnText === 'semua')) {
-            btn.className = 'filter-btn px-4 py-2 rounded-lg bg-kkn-primary text-white shadow-md transition-all';
-        } else {
-            btn.className = 'filter-btn px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-kkn-soft dark:border-kkn-primary text-kkn-primary dark:text-kkn-accent hover:bg-kkn-soft/20 transition shadow-sm';
-        }
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        const text = btn.innerText.toLowerCase();
+        const isMatch = text === category || (category === 'all' && text === 'semua');
+        btn.className = isMatch ? 'filter-btn active px-4 py-2 rounded-full text-sm font-semibold transition bg-kkn-primary text-white' 
+                                : 'filter-btn px-4 py-2 rounded-full text-sm font-semibold transition bg-white dark:bg-slate-800 text-slate-600 border border-slate-200';
     });
     renderGallery(category);
 }
 
-// Scroll Galeri
 function scrollGallery(dir) {
-    const scrollAmount = galleryWrapper.clientWidth / 2;
-    galleryWrapper.scrollBy({ left: dir * scrollAmount, behavior: 'smooth' });
+    const width = galleryWrapper.clientWidth;
+    galleryWrapper.scrollBy({ left: dir * (width * 0.8), behavior: 'smooth' });
 }
 
-// Ganti Tema
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-const html = document.documentElement;
-themeToggle.addEventListener('click', () => {
-    if (html.classList.contains('dark')) {
-        html.classList.remove('dark');
-        themeIcon.classList.replace('fa-sun', 'fa-moon');
-    } else {
-        html.classList.add('dark');
-        themeIcon.classList.replace('fa-moon', 'fa-sun');
-    }
+// Render Members
+function renderMembers() {
+    membersList.innerHTML = '';
+    kknMembers.forEach(m => {
+        const card = document.createElement('div');
+        card.className = 'text-center group';
+        card.innerHTML = `
+            <div class="w-24 h-24 md:w-28 md:h-28 mx-auto rounded-full overflow-hidden mb-4 ring-4 ring-kkn-soft/20 group-hover:ring-kkn-accent transition-all duration-300 shadow-lg transform group-hover:scale-105">
+                <img src="${m.photo}" alt="${m.name}" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-xs md:text-sm line-clamp-1">${m.name}</h4>
+            <p class="text-[9px] md:text-[10px] text-kkn-primary font-bold uppercase mt-1">${m.role}</p>
+        `;
+        membersList.appendChild(card);
+    });
+}
+
+// UI Interactions
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
+document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
 });
 
-// Modal Gambar
+document.getElementById('theme-toggle').addEventListener('click', () => {
+    html.classList.toggle('dark');
+    const icon = document.getElementById('theme-icon');
+    icon.className = html.classList.contains('dark') ? 'fas fa-sun text-xl' : 'fas fa-moon text-xl';
+});
+
 function openModal(url) {
     document.getElementById('modalImage').src = url;
     document.getElementById('imageModal').classList.remove('hidden');
     document.body.style.overflow = 'hidden';
 }
+
 function closeModal() {
     document.getElementById('imageModal').classList.add('hidden');
     document.body.style.overflow = 'auto';
 }
 
-// Render Daftar Anggota secara dinamis dari kknMembers
-const membersList = document.getElementById('members-list');
-function renderMembers() {
-    membersList.innerHTML = '';
-    kknMembers.forEach((member) => {
-        const div = document.createElement('div');
-        div.className = 'text-center group';
-        div.innerHTML = `
-            <div class="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 ring-4 ring-kkn-soft/20 dark:ring-slate-800 group-hover:ring-kkn-accent transition-all duration-300 shadow-lg transform group-hover:scale-105">
-                <img src="${member.photo}" alt="${member.name}" class="w-full h-full object-cover">
-            </div>
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm">${member.name}</h4>
-            <p class="text-[10px] text-kkn-primary dark:text-kkn-accent font-medium uppercase tracking-wider">${member.role}</p>
-        `;
-        membersList.appendChild(div);
-    });
-}
-
-// Logika Form Pesan
+// Form Logic
 const messageForm = document.getElementById('messageForm');
-const submitBtn = document.getElementById('submitBtn');
-const btnText = document.getElementById('btnText');
-const successOverlay = document.getElementById('successOverlay');
-
-messageForm.addEventListener('submit', function(e) {
+messageForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    if(!PUBLIC_KEY) {
-        simulateSending();
-        return;
-    }
-    submitBtn.disabled = true;
-    btnText.innerHTML = '<span class="spinner"></span> Mengirim...';
-    const templateParams = {
-        from_name: document.getElementById('from_name').value,
-        message: document.getElementById('message_text').value,
-        to_email: "kknponcogatiunej2025@gmail.com"
-    };
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
-        .then(function() {
-            successOverlay.classList.remove('hidden');
-            submitBtn.disabled = false;
-            btnText.innerText = 'Kirim Pesan';
-        }, function(error) {
-            alert("Gagal mengirim: " + JSON.stringify(error));
-            submitBtn.disabled = false;
-            btnText.innerText = 'Kirim Pesan';
-        });
-});
-
-function simulateSending() {
-    submitBtn.disabled = true;
-    btnText.innerHTML = '<span class="spinner"></span> Mengirim...';
+    const btn = document.getElementById('submitBtn');
+    const txt = document.getElementById('btnText');
+    
+    btn.disabled = true;
+    txt.innerHTML = '<div class="spinner"></div>';
+    
     setTimeout(() => {
-        successOverlay.classList.remove('hidden');
-        submitBtn.disabled = false;
-        btnText.innerText = 'Kirim Pesan';
+        document.getElementById('successOverlay').classList.remove('hidden');
+        btn.disabled = false;
+        txt.innerText = 'Kirim Pesan';
     }, 1500);
-}
+});
 
 function resetForm() {
     messageForm.reset();
-    successOverlay.classList.add('hidden');
+    document.getElementById('successOverlay').classList.add('hidden');
 }
 
-// Inisialisasi Tampilan
-renderGallery('all');
+// Init
+renderGallery();
 renderMembers();
