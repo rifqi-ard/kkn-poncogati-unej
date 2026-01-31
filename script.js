@@ -1,11 +1,11 @@
 // --- DATA ---
 const photos = [
-    { url: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600', title: 'Rapat Desa', category: 'sosial' },
-    { url: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=600', title: 'Workshop Warga', category: 'sosial' },
-    { url: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600', title: 'Makan Bersama', category: 'random' },
-    { url: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=600', title: 'Senyum Bocah', category: 'random' },
-    { url: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600', title: 'Bakti Sosial', category: 'sosial' },
-    { url: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=600', title: 'Malam Akrab', category: 'random' },
+    { url: '/image/AwalTercipta.webp', title: 'Awal Tercipta', category: 'sosial' },
+    { url: '/image/Sosialisasi.jpg', title: 'Sosialisasi', category: 'sosial' },
+    { url: "/image/MakanBersama.jpg", title: 'Makan Bersama', category: 'random' },
+    { url: '/image/Bolang.png', title: 'Bolang', category: 'random' },
+    { url: '/image/KunjunganUMKM.webp', title: 'UMKM Poncogati', category: 'sosial' },
+    { url: '/image/Makrab.webp', title: 'Malam Akrab', category: 'random' },
 ];
 
 const kknMembers = [
