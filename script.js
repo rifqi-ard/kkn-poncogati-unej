@@ -11,16 +11,16 @@ const photos = [
 const kknMembers = [
     { name: "Safira Nur Amaliyah", role: "Kordes", photo: "/image/1.webp" },
     { name: "Nur Mustafida", role: "Sekretaris", photo: "/image/2.webp" },
-    { name: "Dea Novela R", role: "Bendahara", photo: "/image/3.webp" },
-    { name: "Dini Amalia I", role: "Acara", photo: "/image/4.webp" },
-    { name: "Chika Dyah F", role: "Acara", photo: "/image/5.webp" },
-    { name: "Melin Silvika", role: "Acara", photo: "/image/6.webp" },
-    { name: "Shinta Nuriyah", role: "Humas", photo: "/image/7.webp" },
-    { name: "Amanda Putri", role: "Humas", photo: "/image/8.webp" },
+    { name: "Dea Novela Ramadani", role: "Bendahara", photo: "/image/3.webp" },
+    { name: "Dini Amalia Irvanti", role: "Acara", photo: "/image/4.webp" },
+    { name: "Chika Dyah Fishanta", role: "Acara", photo: "/image/5.webp" },
+    { name: "Melin Silvika Nur'aini", role: "Acara", photo: "/image/6.webp" },
+    { name: "Shinta Nuriyah Maulidi", role: "Humas", photo: "/image/7.webp" },
+    { name: "Amanda Putri Agung Pratama", role: "Humas", photo: "/image/8.webp" },
     { name: "Mohammad Faqih", role: "Perlengkapan", photo: "/image/9.webp" },
-    { name: "M. Rico Prasetya", role: "Perlengkapan", photo: "/image/10.webp" },
+    { name: "Muhammad Rico Prasetya", role: "Perlengkapan", photo: "/image/10.webp" },
     { name: "Rifqi Ardiyansyah", role: "Pubdekdok", photo: "/image/11.webp" },
-    { name: "Nugroho Tri P", role: "Pubdekdok", photo: "/image/12.webp" }
+    { name: "Nugroho Tri Purnomo", role: "Pubdekdok", photo: "/image/12.webp" }
 ];
 
 // --- CORE LOGIC ---
